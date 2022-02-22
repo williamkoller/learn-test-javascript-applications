@@ -7,3 +7,7 @@ module.exports.sum = (num1, num2) => {
   }
   return +int1 + +int2
 }
+
+module.exports.division = (num1, num2) => {
+  return num1 / num2;
+}
