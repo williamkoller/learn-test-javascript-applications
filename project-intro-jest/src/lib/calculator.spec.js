@@ -1,4 +1,4 @@
-const { sum, division } = require('./calculator');
+const { sum, division, subtraction } = require('./calculator');
 
 describe('Calculator', () => {
   describe('sum()', () => {
@@ -56,6 +56,12 @@ describe('Calculator', () => {
       }).toThrowError();
     });
     
+  });
+
+  describe('subtraction()', () => {
+    it('should subtraction 2 and 2 and the result must be 0', () => {
+      expect(subtraction(2, 2)).toBe(0)
+    });
   });
   
 });
