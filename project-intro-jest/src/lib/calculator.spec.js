@@ -36,17 +36,23 @@ describe('Calculator', () => {
 
     it('should division 2 and 2 even if one of them is a string and the result must be 1', () => {
       expect(division('2', '2')).toBe(1);
+    });
 
+    it('should throw an error if what is provided to the method cannot be split', () => {
       expect(() => {
-        sum([2, 2]);
+        division('', '1');
       }).toThrowError();
 
       expect(() => {
-        sum({});
+        division([2, 2]);
       }).toThrowError();
 
       expect(() => {
-        sum();
+        division({});
+      }).toThrowError();
+
+      expect(() => {
+        division();
       }).toThrowError();
     });
     
