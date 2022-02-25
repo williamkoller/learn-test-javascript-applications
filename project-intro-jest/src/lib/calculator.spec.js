@@ -1,7 +1,7 @@
-const { sum, division, subtraction } = require('./calculator');
+const { sum, division, subtraction, multiplication } = require('./calculator');
 
 describe('Calculator', () => {
-  describe('sum()', () => {
+  describe('sum() +', () => {
     it('should sum 2 and 2 and the result must be 4', () => {
       expect(sum(2, 2)).toBe(4);
     });
@@ -29,7 +29,7 @@ describe('Calculator', () => {
     });
   });
 
-  describe('division()', () => {
+  describe('division() /', () => {
     it('should division 2 and 2 and the result must be 1', () => {
       expect(division(2, 2)).toBe(1)
     });
@@ -58,7 +58,7 @@ describe('Calculator', () => {
     
   });
 
-  describe('subtraction()', () => {
+  describe('subtraction() -', () => {
     it('should subtraction 2 and 2 and the result must be 0', () => {
       expect(subtraction(2, 2)).toBe(0)
     });
@@ -83,6 +83,12 @@ describe('Calculator', () => {
       expect(() => {
         subtraction();
       }).toThrowError();
+    });
+  });
+
+  describe('multiplication() *', () => {
+    it('should multiplication 2 and 3 and the result must be 6', () => {
+      expect(multiplication(2, 3)).toBe(6)
     });
   });
   
