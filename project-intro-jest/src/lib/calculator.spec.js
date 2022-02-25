@@ -94,6 +94,24 @@ describe('Calculator', () => {
     it('should subtraction 2 and 2 even if one of them is a string and the result must be 6', () => {
       expect(multiplication('2', '3')).toBe(6)
     });
+
+    it('should throw an error if what is provided to the method cannot be multiplication', () => {
+      expect(() => {
+        multiplication('', '3');
+      }).toThrowError();
+
+      expect(() => {
+        multiplication([2, 3]);
+      }).toThrowError();
+
+      expect(() => {
+        multiplication({});
+      }).toThrowError();
+
+      expect(() => {
+        multiplication();
+      }).toThrowError();
+    });
   });
   
 });
