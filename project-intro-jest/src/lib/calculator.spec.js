@@ -92,7 +92,6 @@ describe('Calculator', () => {
     });
 
     it('should subtraction 2 and 2 even if one of them is a string and the result must be 6', () => {
-      console.log(multiplication('2', '3'))
       expect(multiplication('2', '3')).toBe(6)
     });
   });
